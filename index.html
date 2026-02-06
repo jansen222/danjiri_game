@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SideRunner Web (Mobile)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        <div id="loading-overlay">
+            <div class="spinner"></div>
+            <p id="loading-text">Loading...</p>
+        </div>
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div class="dpad-container">
+                <button id="btn-up" class="control-btn" data-key="ArrowUp">▲</button>
+                <div class="dpad-row">
+                    <button id="btn-left" class="control-btn" data-key="ArrowLeft">◀</button>
+                    <button id="btn-right" class="control-btn" data-key="ArrowRight">▶</button>
+                </div>
+                <button id="btn-down" class="control-btn" data-key="ArrowDown">▼</button>
+            </div>
+
+            <div class="action-container">
+                <button id="btn-esc" class="control-btn small-btn" data-key="Escape">ESC</button>
+                <button id="btn-action" class="control-btn big-btn" data-key="Space">JUMP / OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
